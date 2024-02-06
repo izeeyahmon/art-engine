@@ -289,7 +289,6 @@ const drawBackground = (canvasContext, background) => {
 };
 
 const addMetadata = (_dna, _edition, _prefixData) => {
-  let dateTime = Date.now();
   const { _prefix, _offset, _imageHash } = _prefixData;
 
   const combinedAttrs = [...attributesList, ...extraAttributes()];
@@ -308,10 +307,8 @@ const addMetadata = (_dna, _edition, _prefixData) => {
     image: `${baseUri}/${_edition}${outputJPEG ? ".jpg" : ".png"}`,
     ...(hashImages === true && { imageHash: _imageHash }),
     edition: _edition,
-    date: dateTime,
     ...extraMetadata,
     attributes: cleanedAttrs,
-    compiler: "HashLips Art Engine - NFTChef fork",
   };
   metadataList.push(tempMetadata);
   attributesList = [];

@@ -28,8 +28,8 @@ const outputJPEG = false; // if false, the generator outputs png's
 const startIndex = 0;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 9000,
+  height: 9000,
   smoothing: true, // set to false when up-scaling pixel art.
 };
 
@@ -40,22 +40,20 @@ const background = {
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 10,
-    namePrefix: "Series 2", // Use to add a name to Metadata `name:`
+    growEditionSizeTo: 2,
+    namePrefix: "Parasite Wars", // Use to add a name to Metadata `name:`
     layersOrder: [
-      { name: "Background" },
-      {
-        name: "Back Accessory",
-        // options: {
-        //   bypassDNA: true,
-        // },
-      },
-      { name: "Head" },
-      { name: "Clothes" },
-      { name: "Eyes" },
-      { name: "Hair" },
-      { name: "Accessory" },
-      { name: "Shirt Accessories" },
+      { name: "YORK_BG", trait: "Background" },
+      { name: "YORK_BODY", trait: "Body" },
+      { name: "TSHIRT", trait: "T-Shirt" },
+      { name: "JACKET", trait: "Jacket" },
+      { name: "YORK_HEAD", trait: "Head" },
+      { name: "YORK_EYES", trait: "Eyes" },
+      { name: "YORK_MOUTH", trait: "Mouth" },
+      { name: "YORK_TONGUE", trait: "Tongue" },
+      { name: "YORK_HAIR", trait: "Hair" },
+      { name: "YORK_CAN", trait: "Can" },
+      { name: "YORK_FIRE-EFFECTS", trait: "Fire Effects" },
     ],
   },
   // {
@@ -149,7 +147,7 @@ const extraAttributes = () => [
 ];
 
 // Outputs an Keccack256 hash for the image. Required for provenance hash
-const hashImages = true;
+const hashImages = false;
 
 const rarityDelimiter = "#";
 
