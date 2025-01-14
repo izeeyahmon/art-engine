@@ -15,8 +15,7 @@ const layersDir = path.join(basePath, "/layers");
  * General Generator Options
  ***********************/
 
-const description =
-  "This is the description of your NFT project, remember to replace this";
+const description = "Monadians";
 const baseUri = "ipfs://NewUriToReplace";
 
 const outputJPEG = false; // if false, the generator outputs png's
@@ -28,32 +27,33 @@ const outputJPEG = false; // if false, the generator outputs png's
 const startIndex = 0;
 
 const format = {
-  width: 9000,
-  height: 9000,
+  width: 2048,
+  height: 2048,
   smoothing: true, // set to false when up-scaling pixel art.
 };
 
 const background = {
-  generate: true,
+  generate: false,
   brightness: "80%",
 };
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 2,
-    namePrefix: "Parasite Wars", // Use to add a name to Metadata `name:`
+    growEditionSizeTo: 50,
+    namePrefix: "Monadians", // Use to add a name to Metadata `name:`
     layersOrder: [
-      { name: "YORK_BG", trait: "Background" },
-      { name: "YORK_BODY", trait: "Body" },
-      { name: "TSHIRT", trait: "T-Shirt" },
-      { name: "JACKET", trait: "Jacket" },
-      { name: "YORK_HEAD", trait: "Head" },
-      { name: "YORK_EYES", trait: "Eyes" },
-      { name: "YORK_MOUTH", trait: "Mouth" },
-      { name: "YORK_TONGUE", trait: "Tongue" },
-      { name: "YORK_HAIR", trait: "Hair" },
-      { name: "YORK_CAN", trait: "Can" },
-      { name: "YORK_FIRE-EFFECTS", trait: "Fire Effects" },
+      { name: "z-1,Background", trait: "Background" },
+      { name: "Type", trait: "Type" },
+      // { name: "z0,Backtraits", trait: "Backtraits" },
+      // {
+      //   name: "z1,Base",
+      //   trait: "Skin",
+      // },
+
+      // { name: "z2,Mouth", trait: "Mouth" },
+      // { name: "z3,Clothes", trait: "Clothes" },
+      // // { name: "z6,Eyes" },
+      // { name: "z100,Hairstyle", trait: "Hairstyle" },
     ],
   },
   // {
@@ -151,7 +151,7 @@ const hashImages = false;
 
 const rarityDelimiter = "#";
 
-const uniqueDnaTorrance = 10000;
+const uniqueDnaTorrance = 100;
 
 /**
  * Set to true to always use the root folder as trait_type
